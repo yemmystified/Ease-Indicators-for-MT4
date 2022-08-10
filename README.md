@@ -1,2 +1,2 @@
-# EaseKeys-for-MT4
-This is a custom keyboard shortcut for MT4 trading terminal
+# Ease-Indicators-for-MT4
+Some MT4 indicator source code for easy trading
