@@ -111,7 +111,6 @@ void OnChartEvent(const int id,         // Event identifier
    bool button_state = ObjectGet(show_button, OBJPROP_STATE); // To get the state of the button Pressed/Released
 
 //--- the mouse has been clicked on the graphic object
-//if(id==CHARTEVENT_OBJECT_CLICK)
    if(id==CHARTEVENT_OBJECT_CLICK || id == CHARTEVENT_KEYDOWN)
      {
       //--- Show Candles when button has been clicked
@@ -129,7 +128,6 @@ void OnChartEvent(const int id,         // Event identifier
 
         }
       //--- Hide Candles when button has been clicked
-      //if(sparam==show_button && button_state == true)
       else
          if((sparam==show_button && button_state == true) || int(lparam) == KEY_O)
            {
@@ -141,8 +139,6 @@ void OnChartEvent(const int id,         // Event identifier
             ObjectSetInteger(0,show_button,OBJPROP_FONTSIZE,10);
             ObjectSetString(0, show_button, OBJPROP_TOOLTIP, "Disable Trade Levels!");
             ChartShowTradeLevelsSet(true,0);
-
-
            }
 
      }
